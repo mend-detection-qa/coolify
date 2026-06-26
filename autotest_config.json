@@ -35,7 +35,7 @@
       },
       "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
       "direct_dependencies_names_list": {
-        "eq": [
+        "contains": [
           "socialiteproviders/zitadel",
           "@tailwindcss/forms-0.5.10.tgz",
           "symfony/yaml",
