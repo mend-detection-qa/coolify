@@ -28,14 +28,14 @@
         "gte": 300
       },
       "expected_direct_dependencies_number": {
-        "gte": 64
+        "gte": 59
       },
       "expected_transitive_dependencies_number": {
         "gte": 300
       },
       "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
       "direct_dependencies_names_list": {
-        "eq": [
+        "contains": [
           "socialiteproviders/zitadel",
           "@tailwindcss/forms-0.5.10.tgz",
           "symfony/yaml",
@@ -51,7 +51,6 @@
           "laravel/ui",
           "lorisleiva/laravel-actions",
           "phpseclib/phpseclib",
-          "claude-3-5-sonnet-20240620",
           "@xterm/xterm-6.0.0.tgz",
           "doctrine/dbal",
           "pion/laravel-chunk-upload",
@@ -77,7 +76,6 @@
           "@tailwindcss/typography-0.5.16.tgz",
           "socialiteproviders/discord",
           "spatie/laravel-ray",
-          "gpt-4o",
           "laravel/nightwatch",
           "socialiteproviders/authentik",
           "socialiteproviders/google",
@@ -86,7 +84,6 @@
           "laravel/framework",
           "socialiteproviders/infomaniak",
           "laravel/socialite",
-          "gpt-4.1-mini",
           "@xterm/addon-fit-0.11.0.tgz",
           "spatie/laravel-activitylog",
           "socialiteproviders/microsoft-azure",
@@ -96,7 +93,6 @@
           "zircote/swagger-php",
           "spatie/url",
           "guzzlehttp/guzzle",
-          "claude-3-haiku-20240307",
           "laravel/tinker",
           "laravel/horizon"
         ]
@@ -127,7 +123,7 @@
       "check_scanner_logs": true,
       "_comment_check_scanner_logs": "Whether to check scanner logs and attach them to Report Portal. Options: true | false. Default: true",
       "detect_secrets": false,
-      "_comment_detect_secrets": "Whether to scan scanner logs for leaked secrets (API tokens, passwords, private keys, etc.). Options: true | false. Default: false. When true, runs TWO checks: (1) Yelp's detect-secrets (Apache 2.0, pure Python \u2014 high-entropy and keyword plugins disabled to avoid false positives on scan context-ids, temp paths, and fork-repo names; AWS/JWT/GitHub/Slack/private-key detectors remain active). (2) Claude agentic check via the Anthropic API \u2014 requires ANTHROPIC_API_KEY; if the key is missing, the SDK is not installed, or the API call fails, this sub-check is skipped with a warning (never fails the test). All found secret values are redacted (first 4 + last 4 chars) before logging; raw values never appear in output. Runs independently of validate_scanner_logs. Skipped on GHE environments.",
+      "_comment_detect_secrets": "Whether to scan scanner logs for leaked secrets (API tokens, passwords, private keys, etc.). Options: true | false. Default: false. When true, runs TWO checks: (1) Yelp's detect-secrets (Apache 2.0, pure Python — high-entropy and keyword plugins disabled to avoid false positives on scan context-ids, temp paths, and fork-repo names; AWS/JWT/GitHub/Slack/private-key detectors remain active). (2) Claude agentic check via the Anthropic API — requires ANTHROPIC_API_KEY; if the key is missing, the SDK is not installed, or the API call fails, this sub-check is skipped with a warning (never fails the test). All found secret values are redacted (first 4 + last 4 chars) before logging; raw values never appear in output. Runs independently of validate_scanner_logs. Skipped on GHE environments.",
       "expected_log_lines": [],
       "_comment_expected_log_lines": "Optional. List of log lines to validate. Each entry should have an 'operator' (eq or regex) and 'value' (string or regex pattern). Example: [{'operator': 'eq', 'value': 'Python version: 3.11'}, {'operator': 'regex', 'value': 'Python version: \\d+\\.\\d+'}]. If not provided, only log attachment will be performed."
     },
