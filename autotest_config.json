@@ -27,10 +27,10 @@
         "gte": 300
       },
       "expected_direct_dependencies_number": {
-        "gte": 59
+        "gte": 49
       },
       "expected_transitive_dependencies_number": {
-        "gte": 300
+        "gte": 276
       },
       "_comment_expected_dependencies_number": "Optional. Expected number of dependencies with comparison operator. Operators: gt (>), gte (>=), lt (<), lte (<=), eq (==). If not provided, this check will not be performed.",
       "direct_dependencies_names_list": {
@@ -45,7 +45,6 @@
           "spatie/laravel-data",
           "spatie/laravel-markdown",
           "laravel/sanctum",
-          "ws-8.19.0.tgz",
           "ioredis-5.6.1.tgz",
           "laravel/ui",
           "lorisleiva/laravel-actions",
@@ -58,19 +57,15 @@
           "log1x/laravel-webfonts",
           "resend/resend-laravel",
           "@xterm/xterm-5.5.0.tgz",
-          "axios-1.15.0.tgz",
           "nubs/random-name-generator",
-          "dotenv-17.3.1.tgz",
           "pusher/pusher-php-server",
           "laravel/prompts",
-          "node-pty-1.1.0.tgz",
           "laravel/pail",
           "danharrin/livewire-rate-limiting",
           "playwright-1.58.2.tgz",
           "sentry/sentry-laravel",
           "spatie/laravel-schemaless-attributes",
           "@xterm/addon-fit-0.10.0.tgz",
-          "cookie-1.1.1.tgz",
           "socialiteproviders/clerk",
           "@tailwindcss/typography-0.5.16.tgz",
           "socialiteproviders/discord",
